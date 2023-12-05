@@ -13,14 +13,14 @@ def display_list():
 
 def complete_task(task_index):
     if 1<= task_index <= len(task_list):
-        task_list[task_index + 1] += "Completed"
+        task_list[task_index - 1] += "Completed"
         print('Task marked as completed')
     else:
         print("Invalid option")
 
 def remove_task(task_index):
     if 1<= task_index <= len(task_list):
-        removed_task = task_list.pop(task_index + 1)
+        removed_task = task_list.pop(task_index -1 )
         print(f'Task {removed_task} removed')
     else:
         print("Invalid option")
