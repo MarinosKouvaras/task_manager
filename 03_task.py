@@ -5,9 +5,11 @@ def add_task(task):
     print(f'Task {task} added')
 
 def display_list():
-    if not task_list
-    for index, task in enumerate(task_list, start=1):
-        print(f' {index}. {task}')
+    if not task_list:
+        print("Task list is empty")
+    else:
+        for index, task in enumerate(task_list, start=1):
+            print(f' {index}. {task}')
 
 def complete_task(task_index):
     if 1<= task_index <= len(task_list):
@@ -24,7 +26,8 @@ def remove_task(task_index):
         print("Invalid option")
 
 
-while true:
+while True:
+    
     def display_menu(self):
         print("\nOptions:")
         print("1. Add Task")
@@ -32,4 +35,25 @@ while true:
         print("3. Mark Task as Completed")
         print("4. Remove Task")
         print(" 5. Exit")
+    
+    choice = int(input('Select an option'))
+
+    if choice == 1:
+        t = input("Enter the task: ")
+        add_task(t)
+    elif choice == 2:
+        display_list()
+    elif choice == 3:
+        i = int(input("Give task to marked as completed: "))
+        complete_task(i)
+    elif choice == 4:
+        i = int(input("Give task to remove: "))
+        remove_task(i)
+    elif choice == 5:
+        break
+    else:
+        print("Invalid option")
+
+
+
     
