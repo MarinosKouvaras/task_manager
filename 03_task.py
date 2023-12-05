@@ -14,7 +14,7 @@ def display_list():
 def complete_task(task_index):
     if 1<= task_index <= len(task_list):
         task_list[task_index + 1] += "Completed"
-        print(f'Task marked as completed')
+        print('Task marked as completed')
     else:
         print("Invalid option")
 
@@ -25,16 +25,18 @@ def remove_task(task_index):
     else:
         print("Invalid option")
 
+def display_menu():
+    print("\nOptions:")
+    print("1. Add Task")
+    print("2. Display Tasks")
+    print("3. Mark Task as Completed")
+    print("4. Remove Task")
+    print("5. Exit")
+
 
 while True:
     
-    def display_menu(self):
-        print("\nOptions:")
-        print("1. Add Task")
-        print("2. Display Tasks")
-        print("3. Mark Task as Completed")
-        print("4. Remove Task")
-        print(" 5. Exit")
+    display_menu()
     
     choice = int(input('Select an option'))
 
